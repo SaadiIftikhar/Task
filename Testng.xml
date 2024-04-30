@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Given Task">
-    <test name="Regression">
-         <classes>
-             <class name="java.Task"/>
-          </classes>
-     </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="Test Suite">
+    <listeners>
+        <listener class-name="CustomTestListener" />
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="Task" />
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="CustomTestNGReporter" />
+    </listeners>
+</suite>

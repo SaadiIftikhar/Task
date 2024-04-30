@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <listeners>
+        <listener class-name="CustomTestListener" />
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="Task" />
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="CustomTestNGReporter" />
+    </listeners>
+</suite>

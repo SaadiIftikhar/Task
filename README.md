@@ -1,12 +1,12 @@
 ## Basic Project Specifications
-* Maven-based Java project
-* Latest TestNG and Selenium library
-* Page Object Model followed for different pages encountered
-* Github Repo
-* Should be executable via command line
-* Executable on chrome
-* Proper Logging for pass and failed - preferably each step
-* Preferably, each task as a separate test class
+* Maven-based Java project (Completed)
+* Latest TestNG and Selenium library (Completed)
+* Page Object Model followed for different pages encountered (Completed)
+* Github Repo (Completed)
+* Should be executable via command line (Incomplete)
+* Executable on chrome (Completed)
+* Proper Logging for pass and failed - preferably each step (Completed)
+* Preferably, each task as a separate test class (Completed)
 
 ## Showcase
-* Video: art/Recording 2024-05-01 031038.mp4
+* Video: https://github.com/SaadiIftikhar/Task/blob/350b5c4e8022aab87fb25b8d2ba425e20d36aafb/art/Recording%202024-05-01%20031038.mp4

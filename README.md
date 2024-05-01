@@ -9,4 +9,4 @@
 * Preferably, each task as a separate test class (Completed)
 
 ## Showcase
-* Video: https://github.com/SaadiIftikhar/Task/art/Recording.mp4
+* Video: https://github.com/SaadiIftikhar/Task/art/recording.mp4

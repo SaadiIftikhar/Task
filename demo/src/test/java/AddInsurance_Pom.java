@@ -47,6 +47,7 @@ public class AddInsurance_Pom {
     private void clickAddNew() {
         WebElement addNew = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > a:nth-child(2) > button:nth-child(1)")));
         addNew.click();
+        System.out.println("Clicked Add New");
     }
 
     private void selectCountry() {
@@ -110,6 +111,7 @@ public class AddInsurance_Pom {
     private void clickNext() {
         WebElement next = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(., 'Next')]")));
         next.click();
+        System.out.println("Form Input Done");
     }
 
     private void selectMister() {
@@ -137,6 +139,7 @@ public class AddInsurance_Pom {
     private void clickCheckboxes() {
         for (int i = 1; i <= 4; i++) {
             driver.findElement(By.xpath("(//input[@type='checkbox'])[" + i + "]")).click();
+            System.out.println("Checked all checkboxes");
         }
     }
 
@@ -157,6 +160,7 @@ public class AddInsurance_Pom {
         cardNumber.click();
         cardNumber.sendKeys("42424242424242420430633");
         driver.switchTo().defaultContent();
+        System.out.println("Credit card details inputted");
     }
 
     private void processCreditCard() {
@@ -175,6 +179,7 @@ public class AddInsurance_Pom {
 
     private void verifyEmail() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//th[contains(., '"+randomizedEmail+"')]")));
+        System.out.println("Insurance is added successfully");
     }
 
     // Method to generate a random email address

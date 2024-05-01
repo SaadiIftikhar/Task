@@ -13,10 +13,10 @@ public class ImportInsurance_Pom {
     // Constructor
     public ImportInsurance_Pom(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 10); // Adjust the timeout as needed
+        wait = new WebDriverWait(driver, 10);
     }
 
-    // Method to click on the "Weiter zur Bezahlung" button
+    // Method to click on the "Import Button"
     public void clickImport() {
         WebElement cimport = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(., 'Import')]")));
         cimport.click();
@@ -28,6 +28,7 @@ public class ImportInsurance_Pom {
     WebElement fileInput = driver.findElement(By.id("input-csv"));
     fileInput.sendKeys(uploadFile.getAbsolutePath());
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//th[contains(., 'PDCODE617842')]")));
+    System.out.println("File Uploaded Successfully");
     }
 
     // Click Create Insurance
@@ -35,6 +36,7 @@ public class ImportInsurance_Pom {
         WebElement createInsurance = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Create insurance']")));
         createInsurance.click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='alert']")));
+        System.out.println("Error Shown");
     }
 
     

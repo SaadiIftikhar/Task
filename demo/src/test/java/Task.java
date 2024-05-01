@@ -28,14 +28,18 @@ public class Task
             loginpom.goToWebsite("https://insurance-manager.sb-qa-candidatetask.sisu.sh/login");
             loginpom.changeLanguage();
             loginpom.login("testsellingpartner1@simplesurance.de", "TestSellingPartner1Pass");
+            
+            
 
             // Add Insurance
             insurancePage.addInsurance();
+
+            
         } 
         
         catch (Exception e) 
         {
-            System.err.println("An error occurred: " + e);
+            throw new RuntimeException("Create a single Insurance Policy: " + e.getMessage(), e);
         } 
         
         finally 
@@ -80,7 +84,7 @@ public class Task
         
         catch (Exception e) 
         {
-            System.err.println("An error occurred: " + e);
+            throw new RuntimeException("Create a single Insurance Policy: " + e.getMessage(), e);
         } 
         
         finally 
@@ -121,7 +125,7 @@ public class Task
         
         catch (Exception e) 
         {
-            System.err.println("An error occurred: " + e);
+            throw new RuntimeException("Create a single Insurance Policy: " + e.getMessage(), e);
         } 
         
         finally 

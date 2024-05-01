@@ -26,9 +26,17 @@ public class Login_Pom {
     public void login(String username, String password) {
         WebElement uname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login_username")));
         uname.sendKeys(username);
+        System.out.println("Entered username: " + username);
         WebElement pass = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login_password")));
         pass.sendKeys(password);
+        System.out.println("Entered password");
         driver.findElement(By.cssSelector("button[type='submit']")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > a:nth-child(2) > button:nth-child(1)")));
+        System.out.println("Logged in successfully");
+    }
+    // Example method to simulate test failure
+    public void simulateFailure() {
+        // Simulate a test failure
+        throw new RuntimeException("Simulated failure in login process");
     }
 }
